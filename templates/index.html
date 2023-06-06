@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IR Project</title>
+    <style>
+    #outer {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    }
+     p {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    }
+   #button {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    }
+   #input[type=text] {
+
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+}
+    </style>
+</head>
+<body style="background-color:powderblue;">
+           Unique
+           <input type="radio" name="p" value="Unique">
+           <br>
+           <br>
+           ClinicalTrails
+           <input type="radio" name="p" value="ClinicalTrails">
+  <div  id="outer">
+       <form  method="GET"
+              action="{{ url_for('handle_get') }}">
+         <p>Enter Your Query:</p>
+         <p><input type = "text" size="50" style="width: 500px; height: 25px;" name = "nm" /></p>
+         <p><input type = "submit"  style="width: 90px;height:30px;" value = "submit" /></p>
+      </form>
+</div>
+</body>
+</html>
